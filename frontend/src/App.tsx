@@ -55,6 +55,14 @@ function Inner() {
             <Tabs.Content value="voice-design"><VoiceDesign /></Tabs.Content>
           </Tabs.Root>
         </main>
+        <footer className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-6 flex items-center justify-center gap-2.5 border-t border-q-border/40">
+          <a href="https://github.com/rodlunt" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-q-text3 hover:text-q-text2 transition-colors">
+            <img src="https://github.com/rodlunt.png" className="w-6 h-6 rounded-full opacity-70 hover:opacity-100 transition-opacity" alt="rodlunt" />
+            <span className="text-xs font-medium">rodlunt</span>
+          </a>
+          <span className="text-q-text3/40 text-xs">·</span>
+          <span className="text-xs text-q-text3/60">MIT © 2026</span>
+        </footer>
       </div>
     </div>
   )

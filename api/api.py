@@ -1,4 +1,4 @@
-"""Qwen3-TTS — FastAPI backend."""
+"""Qwen3-TTS FastAPI backend."""
 import argparse
 import io
 import os

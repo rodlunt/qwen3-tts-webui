@@ -1,6 +1,6 @@
 # QWEN3 TTS WebUI
 
-A clean, self-hosted web interface for [Qwen3-TTS](https://huggingface.co/Qwen/Qwen3-TTS-12Hz-1.7B-Base) — local voice synthesis with zero cloud dependency.
+A clean, self-hosted web interface for [Qwen3-TTS](https://huggingface.co/Qwen/Qwen3-TTS-12Hz-1.7B-Base) : local voice synthesis with zero cloud dependency.
 
 Built with **React + Vite + Tailwind** on the frontend and a **FastAPI** backend. Runs in a single Podman/Docker container. Models download automatically from HuggingFace on first use.
 
@@ -9,7 +9,7 @@ Built with **React + Vite + Tailwind** on the frontend and a **FastAPI** backend
 <details>
 <summary>More screenshots</summary>
 
-### Settings panel — theme, tooltips, animated background
+### Settings panel: theme, tooltips, animated background
 ![Settings](docs/screenshot-settings.png)
 
 ### Mobile
@@ -22,12 +22,12 @@ Built with **React + Vite + Tailwind** on the frontend and a **FastAPI** backend
 ## Features
 
 - **Three synthesis modes**
-  - 🎙 **Voice Clone** — clone any voice from a 5–15 sec audio sample
-  - 🗣 **Custom Voice** — pick from 9 built-in speakers with optional style direction
-  - ✨ **Voice Design** — describe a voice in natural language and generate it
-- **Auto-download** — model weights fetch from HuggingFace on first Load Model click
-- **ROCm + CUDA** — AMD and NVIDIA GPU support; CPU fallback available
-- **Mic recording** — capture reference audio directly in the browser
+  - 🎙 **Voice Clone**: clone any voice from a 5–15 sec audio sample
+  - 🗣 **Custom Voice**: pick from 9 built-in speakers with optional style direction
+  - ✨ **Voice Design**: describe a voice in natural language and generate it
+- **Auto-download**: model weights fetch from HuggingFace on first Load Model click
+- **ROCm + CUDA**: AMD and NVIDIA GPU support; CPU fallback available
+- **Mic recording**: capture reference audio directly in the browser
 - **Dark / Light / Auto theme** with animated network background (CPU-free static mode available)
 - **Tooltips** on every parameter, toggleable from the settings panel
 - Fully mobile-responsive
@@ -37,7 +37,7 @@ Built with **React + Vite + Tailwind** on the frontend and a **FastAPI** backend
 ## Requirements
 
 - Podman or Docker
-- AMD GPU (ROCm 6.x) **or** NVIDIA GPU (CUDA 12.x) — CPU works but is slow
+- AMD GPU (ROCm 6.x) **or** NVIDIA GPU (CUDA 12.x); CPU works but is slow
 - ~4 GB VRAM per model in bf16 precision; ~8 GB in fp32
 - ~3 GB disk space per model variant (up to 9 GB for all three)
 
@@ -52,7 +52,7 @@ cd qwen3-tts-webui
 # Build the container (one-time, ~5 min)
 podman build -t localhost/qwen3-tts-webui:latest -f Containerfile .
 
-# Run — models download automatically on first Load Model click
+# Run (models download automatically on first Load Model click)
 ./run.sh
 
 # Or point at an existing model directory
@@ -67,7 +67,7 @@ Open **http://localhost:7860** in your browser.
 
 ## Model directory layout
 
-Models live under your chosen directory (default `~/models/qwen3-tts`). The app creates the subdirectory and downloads the weights automatically — nothing to do manually. If you prefer to pre-download:
+Models live under your chosen directory (default `~/models/qwen3-tts`). The app creates the subdirectory and downloads the weights automatically; nothing to do manually. If you prefer to pre-download:
 
 ```bash
 huggingface-cli download Qwen/Qwen3-TTS-12Hz-1.7B-Base \
@@ -91,7 +91,7 @@ Expected layout after all three models are loaded:
 | Variable | Default | Description |
 |---|---|---|
 | `QWEN_TTS_MODEL_DIR` | `~/models/qwen3-tts` | Model storage directory |
-| `QWEN_TTS_PATH` | — | Path to a custom `qwen_tts` package (optional) |
+| `QWEN_TTS_PATH` | (none) | Path to a custom `qwen_tts` package (optional) |
 
 Pass as CLI arg or environment variable:
 
@@ -110,11 +110,11 @@ QWEN_TTS_MODEL_DIR=/data/models ./run.sh
 Run the frontend dev server with hot-module replacement against a local backend:
 
 ```bash
-# Terminal 1 — Python backend
+# Terminal 1: Python backend
 pip install fastapi "uvicorn[standard]" python-multipart qwen-tts huggingface_hub
 python3 api/api.py --model-dir ./models
 
-# Terminal 2 — Vite dev server (proxies /api to localhost:7860)
+# Terminal 2: Vite dev server (proxies /api to localhost:7860)
 cd frontend && npm install && npm run dev
 ```
 

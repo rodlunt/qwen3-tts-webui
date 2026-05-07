@@ -39,7 +39,7 @@ export function ModelSetup({ onLoaded }: Props) {
 
   return (
     <div className="bg-q-bg1 border border-q-border rounded-card p-5 mb-4">
-      <SectionHeader badge="1" title="Model Setup" desc="Select and load a model — each mode requires its own model" />
+      <SectionHeader badge="1" title="Model Setup" desc="Select and load a model. Each mode requires its own model." />
 
       <div className="flex flex-wrap gap-3 items-end">
         <div className="flex flex-col gap-1.5 min-w-[180px] flex-1">

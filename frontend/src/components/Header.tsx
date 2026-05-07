@@ -56,7 +56,7 @@ export function Header({ activeStep }: { activeStep: number }) {
         {/* Wordmark */}
         <div className="flex-shrink-0">
           <div className="font-mono text-xxs font-semibold tracking-widest text-q-text uppercase">QWEN3 TTS</div>
-          <div className="text-xxs text-q-text3 tracking-wide mt-0.5">Open-source voice synthesis — local &amp; private</div>
+          <div className="text-xxs text-q-text3 tracking-wide mt-0.5">Open-source voice synthesis, local and private</div>
         </div>
 
         {/* Steps */}

@@ -64,7 +64,8 @@ function Inner() {
           </a>
           <span className="text-q-text3/40 text-xs">·</span>
           <span className="text-xs font-medium text-q-text3">MIT © 2026</span>
-        </footer>
+          </footer>
+        </main>
       </div>
     </div>
   )

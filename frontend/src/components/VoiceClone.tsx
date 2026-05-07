@@ -42,7 +42,7 @@ export function VoiceClone() {
             <TextArea
               value={refText}
               onChange={setRefText}
-              placeholder="Exact transcript of the reference audio…"
+              placeholder="The quick brown fox jumps over the lazy dog. She sells seashells by the seashore."
               className="flex-1"
             />
           </div>

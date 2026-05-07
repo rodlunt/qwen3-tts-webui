@@ -1,0 +1,91 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ── Design tokens ── */
+:root {
+  --q-bg0:          #0a0f14;
+  --q-bg1:          #0f1923;
+  --q-bg2:          #162130;
+  --q-bg3:          #1d2d3e;
+  --q-border:       #253344;
+  --q-border-soft:  #1a2633;
+  --q-text:         #e2ecf4;
+  --q-text2:        #7a9bb8;
+  --q-text3:        #3d5468;
+  --q-accent:       #0edbcf;
+  --q-accent-dim:   rgba(14,219,207,0.12);
+  --q-accent-border:rgba(14,219,207,0.35);
+  --q-red:          #fb7185;
+  --q-green:        #22d3ee;
+}
+
+[data-theme="light"] {
+  --q-bg0:          #f0f5fa;
+  --q-bg1:          #ffffff;
+  --q-bg2:          #f4f8fc;
+  --q-bg3:          #e8f0f8;
+  --q-border:       #c8d8e8;
+  --q-border-soft:  #d8e8f4;
+  --q-text:         #0d1e2d;
+  --q-text2:        #3d5a72;
+  --q-text3:        #7a9ab8;
+  --q-accent:       #0891b2;
+  --q-accent-dim:   rgba(8,145,178,0.1);
+  --q-accent-border:rgba(8,145,178,0.3);
+  --q-red:          #e11d48;
+  --q-green:        #0891b2;
+}
+
+@layer base {
+  * { box-sizing: border-box; }
+
+  body {
+    background-color: var(--q-bg0);
+    color: var(--q-text);
+    font-family: 'Outfit', sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  ::-webkit-scrollbar { width: 5px; height: 5px; background: var(--q-bg0); }
+  ::-webkit-scrollbar-thumb { background: var(--q-border); border-radius: 3px; }
+
+  input[type='range'] {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 100%;
+    height: 4px;
+    border-radius: 2px;
+    background: rgba(255,255,255,0.1);
+    outline: none;
+    cursor: pointer;
+  }
+  [data-theme="light"] input[type='range'] {
+    background: rgba(0,0,0,0.12);
+  }
+  input[type='range']::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 17px; height: 17px;
+    border-radius: 50%;
+    background: var(--q-accent);
+    border: 2px solid var(--q-bg1);
+    box-shadow: 0 0 8px var(--q-accent-dim);
+    cursor: pointer;
+    transition: box-shadow 0.15s;
+  }
+  input[type='range']::-webkit-slider-thumb:hover {
+    box-shadow: 0 0 14px var(--q-accent-border);
+  }
+  input[type='range']::-moz-range-thumb {
+    width: 17px; height: 17px;
+    border-radius: 50%;
+    background: var(--q-accent);
+    border: 2px solid var(--q-bg1);
+    cursor: pointer;
+  }
+
+  select option {
+    background: var(--q-bg2);
+    color: var(--q-text);
+  }
+}

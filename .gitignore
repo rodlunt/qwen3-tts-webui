@@ -1,0 +1,22 @@
+# Build logs
+*.log
+
+# Old Gradio prototype (kept locally as reference, not published)
+webui/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+
+# Frontend build artifacts
+frontend/node_modules/
+frontend/dist/
+
+# Models (large binary files)
+models/
+
+# Environment
+.env
+*.env

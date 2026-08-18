@@ -22,7 +22,7 @@ Built with **React + Vite + Tailwind** on the frontend and a **FastAPI** backend
 ## Features
 
 - **Three synthesis modes**
-  - 🎙 **Voice Clone**: clone any voice from a 5–15 sec audio sample
+  - 🎙 **Voice Clone**: clone any voice from a 5 to 15 sec audio sample
   - 🗣 **Custom Voice**: pick from 9 built-in speakers with optional style direction
   - ✨ **Voice Design**: describe a voice in natural language and generate it
 - **Auto-download**: model weights fetch from HuggingFace on first Load Model click
@@ -45,8 +45,11 @@ Built with **React + Vite + Tailwind** on the frontend and a **FastAPI** backend
 
 ## Quick start
 
+The commands below are pinned to the current release tag (`v1.0.0`); check the
+[Releases page](https://github.com/rodlunt/qwen3-tts-webui/releases) for the latest one.
+
 ```bash
-git clone https://github.com/rodlunt/qwen3-tts-webui
+git clone --branch v1.0.0 https://github.com/rodlunt/qwen3-tts-webui
 cd qwen3-tts-webui
 
 # Build the container (one-time, ~5 min)
@@ -117,6 +120,14 @@ python3 api/api.py --model-dir ./models
 # Terminal 2: Vite dev server (proxies /api to localhost:7860)
 cd frontend && npm install && npm run dev
 ```
+
+---
+
+## Contributing and security
+
+Bug reports and feature requests go through [issues](https://github.com/rodlunt/qwen3-tts-webui/issues/new/choose);
+see [CONTRIBUTING.md](CONTRIBUTING.md) for dev setup and PR expectations. Security issues go
+through [SECURITY.md](SECURITY.md), never a public issue.
 
 ---
 

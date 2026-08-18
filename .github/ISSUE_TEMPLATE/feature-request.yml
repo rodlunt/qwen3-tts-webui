@@ -1,0 +1,41 @@
+name: Feature request
+description: An idea for something the app doesn't do yet.
+labels: ["enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to suggest something. The more concrete the request,
+        the easier it is to judge whether it fits the project.
+  - type: textarea
+    id: problem
+    attributes:
+      label: What problem does this solve
+      description: What are you trying to do that the app currently makes hard or impossible?
+      placeholder: There is no way to batch-generate audio for a list of lines without clicking Generate one at a time.
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed solution
+      description: What you would like to see, in as much or as little detail as you have.
+    validations:
+      required: true
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives considered
+      description: Anything else you tried or thought about, including workarounds you are already using.
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Acceptance criteria
+      description: What would need to be true for this to count as done? Two or three testable points.
+      placeholder: |
+        - A list of lines can be submitted and generates one audio file per line
+        - Progress is visible while a batch is running
+        - A failed line does not abort the rest of the batch
+      render: markdown
+    validations:
+      required: true

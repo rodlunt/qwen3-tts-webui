@@ -1,0 +1,64 @@
+name: Bug report
+description: Something the app did wrong; questions and ideas belong in a feature request or a fresh discussion.
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for the report. A few minutes on the fields below usually saves a lot of
+        back and forth working out what actually happened.
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened
+      description: What did the app do, and what did you expect instead?
+      placeholder: Voice Clone synthesis failed with a 500 error, but Custom Voice worked fine on the same input.
+    validations:
+      required: true
+  - type: textarea
+    id: repro
+    attributes:
+      label: How to reproduce it
+      description: The steps you took, as close to exactly as you can manage.
+      placeholder: |
+        1. Started the container with ./run.sh /path/to/models
+        2. Loaded the Base (Voice Clone) model
+        3. Uploaded a 10 second WAV reference sample and clicked Generate
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: Version or commit
+      description: The release tag you built from, or the commit hash if running from main.
+      placeholder: v1.0.0
+    validations:
+      required: true
+  - type: dropdown
+    id: gpu
+    attributes:
+      label: GPU / runtime
+      options:
+        - AMD (ROCm)
+        - NVIDIA (CUDA)
+        - CPU only
+        - Not sure
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: Relevant logs or output
+      description: Container logs (`podman logs qwen3-tts` or the equivalent docker command), browser console errors, or terminal output.
+      render: text
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Acceptance criteria
+      description: What would need to be true for this to count as fixed? Two or three testable points, not "it feels better".
+      placeholder: |
+        - Uploading a 10 second WAV reference sample no longer returns a 500
+        - The same request succeeds on both ROCm and CPU fallback
+      render: markdown
+    validations:
+      required: true

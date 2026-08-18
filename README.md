@@ -4,18 +4,23 @@ A clean, self-hosted web interface for [Qwen3-TTS](https://huggingface.co/Qwen/Q
 
 Built with **React + Vite + Tailwind** on the frontend and a **FastAPI** backend. Runs in a single Podman/Docker container. Models download automatically from HuggingFace on first use.
 
-![Desktop UI](docs/screenshot-desktop.png)
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="docs/screenshot-desktop-dark.png">
+    <img src="docs/screenshot-desktop-light.png" width="85%" alt="Qwen3 TTS desktop interface on the Voice Clone tab, showing the four-step workflow: model setup with Base, Device and Precision selectors and a Load Model button, reference voice upload with drag-and-drop and mic recording, and reference text entry">
+  </picture>
+</p>
 
-<details>
-<summary>More screenshots</summary>
-
-### Settings panel: theme, tooltips, animated background
-![Settings](docs/screenshot-settings.png)
-
-### Mobile
-![Mobile](docs/screenshot-mobile.png)
-
-</details>
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="docs/screenshot-settings-dark.png">
+    <img src="docs/screenshot-settings-light.png" width="55%" alt="Settings panel open over the Voice Clone screen, with Theme set to Dark and Tooltips and Animated background switches both enabled">
+  </picture>
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="docs/screenshot-mobile-dark.png">
+    <img src="docs/screenshot-mobile-light.png" width="30%" alt="Qwen3 TTS on a mobile viewport, showing the same four-step Voice Clone workflow stacked in a single responsive column">
+  </picture>
+</p>
 
 ---
 

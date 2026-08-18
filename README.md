@@ -126,10 +126,4 @@ Built on [Qwen3-TTS](https://huggingface.co/Qwen/Qwen3-TTS-12Hz-1.7B-Base) by Al
 
 ---
 
-<div align="center">
-  <a href="https://github.com/rodlunt">
-    <img src="https://github.com/rodlunt.png" width="48" height="48" style="border-radius:50%" alt="rodlunt">
-  </a>
-  <br>
-  <sub>MIT © 2026 <a href="https://github.com/rodlunt"><strong>rodlunt</strong></a></sub>
-</div>
+<sub>Built by [Rodney Lunt](https://rod.lunt.au). If this saved you some time, you can [buy me a coffee](https://buymeacoffee.com/rodlunt).</sub>

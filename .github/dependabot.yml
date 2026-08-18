@@ -1,0 +1,24 @@
+# Dependabot config for qwen3-tts-webui.
+#
+# Only one ecosystem is configured here. The Python side (api/api.py) has its dependencies
+# declared inline as an unpinned `pip install` line in the Containerfile, not in a
+# requirements.txt or pyproject.toml, so Dependabot's pip ecosystem has no manifest to read and
+# would silently do nothing if added. Pinning those versions in a real manifest is a separate,
+# deliberate change to the build (touching the Containerfile), not repo furniture, so it is not
+# done here. See the PR that added this file for the full note.
+#
+# No github-actions entry either: there are no workflows in this repo yet.
+
+version: 2
+updates:
+  - package-ecosystem: "npm"
+    directory: "/frontend"
+    schedule:
+      interval: "weekly"
+    groups:
+      minor-and-patch:
+        update-types:
+          - "minor"
+          - "patch"
+    # Majors are left out of the group above deliberately, so a breaking change always
+    # gets its own PR and review rather than riding in with routine bumps.

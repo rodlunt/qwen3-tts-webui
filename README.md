@@ -119,11 +119,11 @@ Run the frontend dev server with hot-module replacement against a local backend:
 
 ```bash
 # Terminal 1: Python backend
-pip install fastapi "uvicorn[standard]" python-multipart qwen-tts huggingface_hub
+pip install -r api/requirements.txt
 python3 api/api.py --model-dir ./models
 
 # Terminal 2: Vite dev server (proxies /api to localhost:7860)
-cd frontend && npm install && npm run dev
+cd frontend && pnpm install && pnpm run dev
 ```
 
 ---

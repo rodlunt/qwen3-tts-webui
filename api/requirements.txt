@@ -1,0 +1,9 @@
+# Pinned versions for the FastAPI backend, resolved together with `uv pip install --dry-run`
+# against PyPI on 2026-08-19 so Dependabot has a real manifest to scan. Same package set as
+# the Containerfile installed inline before this file existed.
+qwen-tts==0.1.1
+fastapi==0.141.1
+uvicorn[standard]==0.52.3
+python-multipart==0.0.32
+numpy==2.5.2
+huggingface_hub==0.36.2

@@ -3,7 +3,7 @@
 # the Containerfile installed inline before this file existed.
 qwen-tts==0.1.1
 fastapi==0.141.1
-uvicorn[standard]==0.52.3
+uvicorn[standard]==0.52.4
 python-multipart==0.0.32
-numpy==2.5.2
+numpy==2.5.3
 huggingface_hub==0.36.2
